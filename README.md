@@ -20,3 +20,6 @@ wechat-token-proxy 是一个获取微信access_token的服务。它能使调用�
 |schedule.js|定时执行wx_get_access_token.js|
 |app.js|通过http方式输出json格式的access_token|
 |public/status.html|查看中控服务器执行状态|
+
+## License
+[MIT](LICENSE)
