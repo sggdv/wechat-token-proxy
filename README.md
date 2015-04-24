@@ -23,5 +23,26 @@ wechat-token-proxy 是一个获取微信access_token的服务。它能使调用�
 |app.js|通过http方式输出json格式的access_token|
 |access.json|设置允许访问此服务的 IP 或 域名|
 
+## 如何使用
+
+由于使用了 express 框架，使用 wechat-token-proxy 就只要执行 app.js 文件。步骤如下：
+
+clone 项目
+
+	git clone https://github.com/sggdv/wechat-token-proxy.git
+
+进入目录，安装依赖模块
+
+	cd wechat-token-proxy
+    npm install
+
+设置 wx_config.json 和 access.json 两个文件。
+
+启动项目
+
+	node app.js
+
+打开浏览器，访问 http://localhost:3000
+
 ## License
 [MIT](LICENSE)
