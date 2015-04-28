@@ -29,19 +29,23 @@ wechat-token-proxy 是一个获取微信access_token的服务。它能使调用�
 
 * clone 项目
 
-	git clone https://github.com/sggdv/wechat-token-proxy.git
+```bash
+git clone https://github.com/sggdv/wechat-token-proxy.git
+```
+
 
 * 进入目录，安装依赖模块
-
-	cd wechat-token-proxy
-    npm install
+```bash
+cd wechat-token-proxy
+npm install
+```
 
 * 设置 wx_config.json 和 access.json 两个文件。
 
 * 启动项目
-
-	node app.js
-
+```bash
+node app.js
+```
 * 打开浏览器，访问 http://localhost:3000
 
 ## License
