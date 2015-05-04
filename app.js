@@ -40,7 +40,7 @@ app.get('/', function(req, res) {
       res.json({ access_token: data });
     });
   } else {
-    res.send("Sorry, You don't have permission !");
+    res.send("permission deny !");
   }
 
 });
