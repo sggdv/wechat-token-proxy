@@ -3,7 +3,7 @@ var path = require('path');
 var morgan = require('morgan');
 var shipper = require('./shipper');
 var schedule = require('./schedule');
-var access = require('./access');
+var access = require('./conf/access');
 
 var app = express();
 
