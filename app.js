@@ -10,7 +10,7 @@ var app = express();
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/', function(req, res) {
+app.use(function(req, res, next) {
   var hostname = access.hostname;
 
   var valid = false;
@@ -34,15 +34,24 @@ app.get('/', function(req, res) {
       };
     }
   }
-
+  
   if (valid) {
-    shipper.get(function(err, data) {
-      res.json({ access_token: data });
-    });
+    next();
   } else {
     res.send("permission deny !");
   }
+});
 
+app.get('/', function(req, res) {
+  shipper.get(function(err, data) {
+    res.json({ access_token: data });
+  });
+});
+
+app.get('/ticket', function(req, res) {
+  shipper.ticket(function(err, data) {
+    res.json({ ticket: data});
+  });
 });
 
 schedule.start();
