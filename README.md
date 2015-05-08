@@ -1,7 +1,7 @@
 # wechat-token-proxy
-wechat-token-proxy 是一个获取微信 *access_token* 和 *ticket* 的服务。它能使调用微信公众号各接口的各个业务逻辑点共享access_token，避免产生冲突。
+wechat-token-proxy 是一个获取微信 *access_token* 和 *ticket* 的服务。它能使调用微信公众号各接口的各个业务逻辑点共享 *access_token* 和 *ticket* ，避免产生冲突。
 
-说到这个冲突，就得先了解微信的*access_token*。引用微信官方的描述：
+说到这个冲突，就得先了解微信的 *access_token* 。引用微信官方的描述：
 
 > access_token是公众号的全局唯一票据，公众号调用各接口时都需使用access_token。开发者需要进行妥善保存。access_token的存储至少要保留512个字符空间。access_token的有效期目前为2个小时，需定时刷新，重复获取将导致上次获取的access_token失效。
 
@@ -25,7 +25,7 @@ wechat-token-proxy 是一个获取微信 *access_token* 和 *ticket* 的服务�
 
 ## 如何使用
 
-由于使用了 express 框架，使用 *wechat-token-proxy* 就只要执行 *app.js* 文件。步骤如下：
+由于使用了 *express* 框架，使用 *wechat-token-proxy* 就只要执行 *app.js* 文件。步骤如下：
 
 * clone 项目
 
@@ -40,7 +40,7 @@ cd wechat-token-proxy
 npm install
 ```
 
-* 设置 *wx_config.json* 和 *access.json* 两个文件。
+* 设置 *conf/wx_config.json* 和 *conf/access.json* 两个文件。
 
 * 启动项目
 ```bash
