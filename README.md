@@ -1,5 +1,5 @@
 # wechat-token-proxy
-wechat-token-proxy 是一个获取微信access_token的服务。它能使调用微信公众号各接口的各个业务逻辑点共享access_token，避免产生冲突。
+wechat-token-proxy 是一个获取微信 *access_token* 和 *ticket* 的服务。它能使调用微信公众号各接口的各个业务逻辑点共享access_token，避免产生冲突。
 
 说到这个冲突，就得先了解微信的*access_token*。引用微信官方的描述：
 
