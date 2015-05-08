@@ -25,7 +25,7 @@ wechat-token-proxy 是一个获取微信 *access_token* 和 *ticket* 的服务�
 
 ## 如何使用
 
-由于使用了 *express* 框架，使用 *wechat-token-proxy* 就只要执行 *app.js* 文件。步骤如下：
+由于使用了 *express* 框架，使用 *wechat-token-proxy* 就只需要执行 *app.js* 文件。具体步骤如下：
 
 * clone 项目
 
@@ -34,7 +34,7 @@ git clone https://github.com/sggdv/wechat-token-proxy.git
 ```
 
 
-* 进入目录，安装依赖模块
+* 进入 *wechat-token-proxy* 文件夹，并安装依赖模块
 ```bash
 cd wechat-token-proxy
 npm install
