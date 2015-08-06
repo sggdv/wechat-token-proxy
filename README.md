@@ -15,13 +15,13 @@ wechat-token-proxy 是一个获取微信 *access_token* 和 *ticket* 的服务�
 
 |文件名|功能简介|
 |:--------:|------|
-|wx_config.json|设置微信 app_id 和 app_secret|
-|wx_flush_access_token.js|获取access_token|
-|shipper.js|将access_token写到文件|
-|wx_access_token.json|此文件保存access_token的值|
+|conf/wx_config.json|设置微信 app_id 和 app_secret|
+|destinations/wx_flush_access_token.js|获取access_token|
+|shipper.js|将access_token写到文件, 或读取access_token|
+|refresher/wx_access_token.json|此文件保存access_token的值|
 |schedule.js|定时执行wx_flush_access_token.js|
 |app.js|通过http方式输出json格式的access_token|
-|access.json|设置允许访问此服务的 IP 或 域名|
+|conf/access.json|设置允许访问此服务的 IP 或 域名|
 
 ## 如何使用
 

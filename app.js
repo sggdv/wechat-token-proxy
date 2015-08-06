@@ -10,6 +10,7 @@ var app = express();
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
 
+// 安全机制
 app.use(function(req, res, next) {
   var hostname = access.hostname;
 
