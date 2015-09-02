@@ -46,7 +46,7 @@ npm install
 ```bash
 {
 	"app_id": "微信公众号的AppID",
-    "app_secret": "微信公众号的AppSecret"
+	"app_secret": "微信公众号的AppSecret"
 }
 ```
 *access.json* 内容如下：
@@ -62,8 +62,10 @@ npm install
 node app.js
 ```
 * 打开浏览器
-访问 [http://localhost:3000](http://localhost:3000) 获取 *access_token*；
-访问 [http://localhost:3000/ticket](http://localhost:3000/ticket) 获取 *ticket*。
+
+  访问 [http://localhost:3000](http://localhost:3000) 获取 *access_token*；
+
+  访问 [http://localhost:3000/ticket](http://localhost:3000/ticket) 获取 *ticket*。
 
 ## License
 [MIT](LICENSE)
