@@ -7,11 +7,13 @@ wechat-token-proxy 是一个获取微信 *access_token* 和 *ticket* 的服务�
 
 > 如果第三方不使用中控服务器，而是选择各个业务逻辑点各自去刷新access_token，那么就可能会产生冲突，导致服务不稳定。
 
+> [详见微信官网](http://mp.weixin.qq.com/wiki/11/0e4b294685f817b95cbed85ba5e82b8f.html)
+
 微信限定每天只能调用2000次刷新access_token的接口。换言之，每次调用公众号接口时都刷新access_token的话，很有可能超出2000次/日的限制。
 
 开发 wechat-token-proxy 的目的，是为了让众多的业务逻辑点能和谐调用微信公众号的接口，共享access_token，减少一个令业务服务不稳定的因素。
 
-## 文件列表
+## 项目文件说明
 
 |文件名|功能简介|
 |:--------:|------|
@@ -25,10 +27,9 @@ wechat-token-proxy 是一个获取微信 *access_token* 和 *ticket* 的服务�
 
 ## 如何使用
 
-由于使用了 *express* 框架，使用 *wechat-token-proxy* 就只需要执行 *app.js* 文件。具体步骤如下：
+由于使用了 *express* 框架，启动 *wechat-token-proxy* 只需要执行 *app.js* 文件。具体步骤如下：
 
 * clone 项目
-
 ```bash
 git clone https://github.com/sggdv/wechat-token-proxy.git
 ```
@@ -41,12 +42,26 @@ npm install
 ```
 
 * 设置 *conf/wx_config.json* 和 *conf/access.json* 两个文件。
+*wx_config.json* 内容如下：
+```bash
+{
+	"app_id": "微信公众号的AppID",
+    "app_secret": "微信公众号的AppSecret"
+}
+```
+*access.json* 内容如下：
+```bash
+{
+	"ip": ["127.0.0.1"],
+	"hostname": ["localhost"]
+}
+```
 
 * 启动项目
 ```bash
 node app.js
 ```
-* 打开浏览器，访问 *http://localhost:3000*
+* 打开浏览器，访问 *http://localhost:3000* 获取 *access_token*；访问 *http://localhost:3000/ticket* 获取 *ticket*。
 
 ## License
 [MIT](LICENSE)
