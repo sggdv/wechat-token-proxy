@@ -61,7 +61,9 @@ npm install
 ```bash
 node app.js
 ```
-* 打开浏览器，访问 [http://localhost:3000](http://localhost:3000) 获取 *access_token*；访问 [http://localhost:3000/ticket](http://localhost:3000/ticket) 获取 *ticket*。
+* 打开浏览器
+访问 [http://localhost:3000](http://localhost:3000) 获取 *access_token*；
+访问 [http://localhost:3000/ticket](http://localhost:3000/ticket) 获取 *ticket*。
 
 ## License
 [MIT](LICENSE)
